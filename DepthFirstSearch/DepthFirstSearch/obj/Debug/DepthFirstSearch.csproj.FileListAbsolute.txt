@@ -1,0 +1,12 @@
+D:\University\Maga1\IIS\DepthFirstSearch\DepthFirstSearch\bin\Debug\DepthFirstSearch.exe.config
+D:\University\Maga1\IIS\DepthFirstSearch\DepthFirstSearch\bin\Debug\DepthFirstSearch.exe
+D:\University\Maga1\IIS\DepthFirstSearch\DepthFirstSearch\bin\Debug\DepthFirstSearch.pdb
+D:\University\Maga1\IIS\DepthFirstSearch\DepthFirstSearch\obj\Debug\DepthFirstSearch.csprojAssemblyReference.cache
+D:\University\Maga1\IIS\DepthFirstSearch\DepthFirstSearch\obj\Debug\DepthFirstSearch.exe
+D:\University\Maga1\IIS\DepthFirstSearch\DepthFirstSearch\obj\Debug\DepthFirstSearch.pdb
+D:\учеба\мага\1 сем\алешкин\DepthFirstSearch\DepthFirstSearch\bin\Debug\DepthFirstSearch.exe.config
+D:\учеба\мага\1 сем\алешкин\DepthFirstSearch\DepthFirstSearch\bin\Debug\DepthFirstSearch.exe
+D:\учеба\мага\1 сем\алешкин\DepthFirstSearch\DepthFirstSearch\bin\Debug\DepthFirstSearch.pdb
+D:\учеба\мага\1 сем\алешкин\DepthFirstSearch\DepthFirstSearch\obj\Debug\DepthFirstSearch.csprojAssemblyReference.cache
+D:\учеба\мага\1 сем\алешкин\DepthFirstSearch\DepthFirstSearch\obj\Debug\DepthFirstSearch.exe
+D:\учеба\мага\1 сем\алешкин\DepthFirstSearch\DepthFirstSearch\obj\Debug\DepthFirstSearch.pdb
