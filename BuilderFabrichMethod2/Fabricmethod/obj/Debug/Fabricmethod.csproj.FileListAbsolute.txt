@@ -1,0 +1,21 @@
+C:\Users\Student\Desktop\Fabricmethod\Fabricmethod\bin\Debug\Fabricmethod.exe.config
+C:\Users\Student\Desktop\Fabricmethod\Fabricmethod\bin\Debug\Fabricmethod.exe
+C:\Users\Student\Desktop\Fabricmethod\Fabricmethod\bin\Debug\Fabricmethod.pdb
+C:\Users\Student\Desktop\Fabricmethod\Fabricmethod\obj\Debug\Fabricmethod.csprojAssemblyReference.cache
+C:\Users\Student\Desktop\Fabricmethod\Fabricmethod\obj\Debug\Fabricmethod.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\Fabricmethod\Fabricmethod\obj\Debug\Fabricmethod.exe
+C:\Users\Student\Desktop\Fabricmethod\Fabricmethod\obj\Debug\Fabricmethod.pdb
+C:\Users\Igor\Desktop\Fabricmethod — копия\Fabricmethod\bin\Debug\Fabricmethod.exe.config
+C:\Users\Igor\Desktop\Fabricmethod — копия\Fabricmethod\bin\Debug\Fabricmethod.exe
+C:\Users\Igor\Desktop\Fabricmethod — копия\Fabricmethod\bin\Debug\Fabricmethod.pdb
+C:\Users\Igor\Desktop\Fabricmethod — копия\Fabricmethod\obj\Debug\Fabricmethod.csprojAssemblyReference.cache
+C:\Users\Igor\Desktop\Fabricmethod — копия\Fabricmethod\obj\Debug\Fabricmethod.csproj.CoreCompileInputs.cache
+C:\Users\Igor\Desktop\Fabricmethod — копия\Fabricmethod\obj\Debug\Fabricmethod.exe
+C:\Users\Igor\Desktop\Fabricmethod — копия\Fabricmethod\obj\Debug\Fabricmethod.pdb
+C:\Users\Igor\Desktop\BuilderFabrichMethod2\Fabricmethod\bin\Debug\Fabricmethod.exe.config
+C:\Users\Igor\Desktop\BuilderFabrichMethod2\Fabricmethod\bin\Debug\Fabricmethod.exe
+C:\Users\Igor\Desktop\BuilderFabrichMethod2\Fabricmethod\bin\Debug\Fabricmethod.pdb
+C:\Users\Igor\Desktop\BuilderFabrichMethod2\Fabricmethod\obj\Debug\Fabricmethod.csprojAssemblyReference.cache
+C:\Users\Igor\Desktop\BuilderFabrichMethod2\Fabricmethod\obj\Debug\Fabricmethod.csproj.CoreCompileInputs.cache
+C:\Users\Igor\Desktop\BuilderFabrichMethod2\Fabricmethod\obj\Debug\Fabricmethod.exe
+C:\Users\Igor\Desktop\BuilderFabrichMethod2\Fabricmethod\obj\Debug\Fabricmethod.pdb

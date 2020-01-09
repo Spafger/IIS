@@ -1,0 +1,14 @@
+C:\Users\Igor\Desktop\ChainDelegat\ConsoleApp9\bin\Debug\ConsoleApp9.exe.config
+C:\Users\Igor\Desktop\ChainDelegat\ConsoleApp9\bin\Debug\ConsoleApp9.exe
+C:\Users\Igor\Desktop\ChainDelegat\ConsoleApp9\bin\Debug\ConsoleApp9.pdb
+C:\Users\Igor\Desktop\ChainDelegat\ConsoleApp9\obj\Debug\ChainDelegat.csprojAssemblyReference.cache
+C:\Users\Igor\Desktop\ChainDelegat\ConsoleApp9\obj\Debug\ChainDelegat.csproj.CoreCompileInputs.cache
+C:\Users\Igor\Desktop\ChainDelegat\ConsoleApp9\obj\Debug\ConsoleApp9.exe
+C:\Users\Igor\Desktop\ChainDelegat\ConsoleApp9\obj\Debug\ConsoleApp9.pdb
+C:\Users\Igor\Desktop\Алешкин\ChainDelegat2\ConsoleApp9\bin\Debug\ConsoleApp9.exe.config
+C:\Users\Igor\Desktop\Алешкин\ChainDelegat2\ConsoleApp9\bin\Debug\ConsoleApp9.exe
+C:\Users\Igor\Desktop\Алешкин\ChainDelegat2\ConsoleApp9\bin\Debug\ConsoleApp9.pdb
+C:\Users\Igor\Desktop\Алешкин\ChainDelegat2\ConsoleApp9\obj\Debug\ChainDelegat.csprojAssemblyReference.cache
+C:\Users\Igor\Desktop\Алешкин\ChainDelegat2\ConsoleApp9\obj\Debug\ChainDelegat.csproj.CoreCompileInputs.cache
+C:\Users\Igor\Desktop\Алешкин\ChainDelegat2\ConsoleApp9\obj\Debug\ConsoleApp9.exe
+C:\Users\Igor\Desktop\Алешкин\ChainDelegat2\ConsoleApp9\obj\Debug\ConsoleApp9.pdb
