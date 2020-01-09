@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Удалить Compl{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h1 style="color: #FFFFFF">Delete Compl</h1>
+    </div>
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <p>Do you want to delete Compl: {{ compl }}</p>
+            <p>
+                <input type="submit" class="btn-danger" value="Yes" name="Yes">
+                <input type="submit" class="btn-light" value="No" name="No">
+            </p>
+        </form>
+        <h1><a href="{% url "out_compl" %}">Return to list</a></h1>
+    </div>
+{% endblock content %}

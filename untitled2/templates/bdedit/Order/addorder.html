@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Добавить Order{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h1 style="color: #FFFFFF">Add new Order</h1>
+    </div>
+    {% if flag %}
+        <div class="container" style="background-color:lightgreen">
+            <p style="font-size: 14pt; font-style: italic;">Order added</p>
+        </div>
+    {% endif %}
+    <div class="container">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <td>Sum</td>
+                    <td>{{ form.sum_order }}</td>
+                </tr>
+                <tr>
+                    <td>Service adress</td>
+                    <td>{{ form.service_adress_id }}</td>
+                    <td><a href="{% url "add_sera" %}">Add Service adress</a></td>
+                </tr>
+                <tr>
+                    <td>Ordering services</td>
+                    <td>{{ form.ordering_services_id }}</td>
+                    <td><a href="{% url "add_orse" %}">Add Ordering services</a></td>
+                </tr>
+                <tr>
+                    <td>Receiving transfer</td>
+                    <td>{{ form.receivingtransfer_id }}</td>
+                    <td><a href="{% url "add_rest" %}">Add Receiving transfer</a></td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>{{ form.date_order }}</td>
+                </tr>
+            </table>
+
+            <p><input type="submit" class="btn-success"></p>
+        </form>
+        <h1><a href="{% url "out_order" %}">Return to list</a></h1>
+    </div>
+{% endblock content %}

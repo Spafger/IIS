@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Добавить Supp{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h1 style="color: #FFFFFF">Add new Supp</h1>
+    </div>
+    {% if flag %}
+        <div class="container" style="background-color:lightgreen">
+            <p style="font-size: 14pt; font-style: italic;">Supp added</p>
+        </div>
+    {% endif %}
+    <div class="container">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <td>Name</td>
+                    <td>{{ form.supplier_name }}</td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td>{{ form.supplier_contact }}</td>
+                </tr>
+            </table>
+
+            <p><input type="submit" class="btn-success"></p>
+        </form>
+        <h1><a href="{% url "out_supp" %}">Return to list</a></h1>
+    </div>
+{% endblock content %}

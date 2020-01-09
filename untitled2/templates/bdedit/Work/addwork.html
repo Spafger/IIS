@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Добавить Work{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h1 style="color: #FFFFFF">Add new Work</h1>
+    </div>
+    {% if flag %}
+        <div class="container" style="background-color:lightgreen">
+            <p style="font-size: 14pt; font-style: italic;">Work added</p>
+        </div>
+    {% endif %}
+    <div class="container">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <td>Detail</td>
+                    <td>{{ form.detail }}</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>{{ form.work_name }}</td>
+                </tr>
+                <tr>
+                    <td>Term</td>
+                    <td>{{ form.work_term }}</td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td>{{ form.work_price }}</td>
+                </tr>
+            </table>
+
+            <p><input type="submit" class="btn-success"></p>
+        </form>
+        <h1><a href="{% url "out_work" %}">Return to list</a></h1>
+    </div>
+{% endblock content %}

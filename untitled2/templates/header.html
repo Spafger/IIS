@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+
+{% if cur_user.id is not None %}
+<ul class="navbar-nav mr-2">
+    <li class="nav-item">
+        <span class="navbar-text">
+            Вы вошли, как {{ cur_user }}
+        </span>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'logout' %}">Выйти</a>
+    </li>
+</ul>
+{% else %}
+<ul class="navbar-nav mr-2">
+    <li class="nav-item">
+        <span class="navbar-text">
+            Вы гость
+        </span>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'login' %}">Войти на сайт</a>
+    </li>
+</ul>
+{% endif %}
+</nav>
+
+<div class="container-fluid">
+    <table class="w-75" style="height: 100px; margin: 0 auto">
+            <tr>
+            </tr>
+    </table>
+</div>
+<hr>

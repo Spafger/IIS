@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Редактировать Discount{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h1 style="color: #FFFFFF">Edit Discount: {{ disc }}</h1>
+    </div>
+    {% if flag %}
+        <div class="container" style="background-color:lightgreen">
+            <p style="font-size: 14pt; font-style: italic;">Discount updated</p>
+        </div>
+    {% endif %}
+    <div class="container">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr hidden>
+                    <td>Card</td>
+                    <td>{{ form.id_card }}</td>
+                </tr>
+                <tr>
+                    <td>bonuses</td>
+                    <td>{{ form.bonuses }}</td>
+                </tr>
+                <tr>
+                    <td>reception date</td>
+                    <td>{{ form.reception_date }}</td>
+                </tr>
+            </table>
+            <p>
+                <input type="submit" class="btn-success">
+                <a href="../outdisc"><input type="button" class="btn-light" value="Discard changes"></a>
+            </p>
+        </form>
+        <h1><a href="{% url "out_disc" %}">Return to list</a></h1>
+    </div>
+{% endblock content %}

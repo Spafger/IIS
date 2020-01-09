@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %} Главное меню{% endblock title %}
+
+{% block content %}
+
+    <div class="container">
+        <span><h2 style="color: #FFFFFF"></h2></span>
+        <table class="table table-light border">
+            <tr>
+                <td style="text-align: center; text-decoration: #040505">
+                    Редактирование БД
+                </td>
+            </tr>
+            <tr>
+                <td><a href="{% url "out_pc" %}">Показать таблицу PC</a></td>
+                <td><a href="{% url "out_disc" %}">Показать таблицу Discount</a></td>
+            </tr>
+            <tr>
+                <td><a href="{% url "out_client" %}">Показать таблицу Client</a></td>
+                <td><a href="{% url "out_rest" %}">Показать таблицу Receiving transfer</a></td>
+            </tr>
+            <tr>
+                <td><a href="{% url "out_sera" %}">Показать таблицу Service adress</a></td>
+                <td><a href="{% url "out_worker" %}">Показать таблицу Worker</a></td>
+            </tr>
+            <tr>
+                <td><a href="{% url "out_work" %}">Показать таблицу Work</a></td>
+                <td><a href="{% url "out_compl" %}">Показать таблицу Component</a></td>
+            </tr>
+            <tr>
+                <td><a href="{% url "out_supp" %}">Показать таблицу Supplier</a></td>
+                <td><a href="{% url "out_stor" %}">Показать таблицу Storage</a></td>
+            </tr>
+            <tr>
+                <td><a href="{% url "out_como" %}">Показать таблицу Component order</a></td>
+                <td><a href="{% url "out_orse" %}">Показать таблицу Ordering services</a></td>
+            </tr>
+            <tr>
+                <td><a href="{% url "out_order" %}">Показать таблицу Order</a></td>
+            </tr>
+        </table>
+    </div>
+{% endblock content %}

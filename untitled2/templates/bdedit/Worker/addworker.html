@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Добавить Worker{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h1 style="color: #FFFFFF">Add new Worker</h1>
+    </div>
+    {% if flag %}
+        <div class="container" style="background-color:lightgreen">
+            <p style="font-size: 14pt; font-style: italic;">Worker added</p>
+        </div>
+    {% endif %}
+    <div class="container">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <td>Post</td>
+                    <td>{{ form.post }}</td>
+                </tr>
+                <tr>
+                    <td>Phone number</td>
+                    <td>{{ form.phone_number_worker }}</td>
+                </tr>
+                <tr>
+                    <td>Account number</td>
+                    <td>{{ form.account_number_worker }}</td>
+                </tr>
+                <tr>
+                    <td>Passport</td>
+                    <td>{{ form.passport_worker }}</td>
+                </tr>
+                <tr>
+                    <td>DofB</td>
+                    <td>{{ form.dofb_worker }}</td>
+                </tr>
+                <tr>
+                    <td>FIO</td>
+                    <td>{{ form.fio_worker }}</td>
+                </tr>
+            </table>
+
+            <p><input type="submit" class="btn-success"></p>
+        </form>
+        <h1><a href="{% url "out_worker" %}">Return to list</a></h1>
+    </div>
+{% endblock content %}

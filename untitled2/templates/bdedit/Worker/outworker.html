@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Таблица Worker{% endblock title %}
+
+{% block content %}
+    <h1 style="color: honeydew"></h1>
+    <div class="container">
+        <h1 style="color: #FFFFFF">Таблица Worker</h1>
+        <table class="table table-light border table-hover" align="center">
+            <tr class="bold_text">
+                <td>Worker id</td>
+                <td>Post</td>
+                <td>Phone number</td>
+                <td>Account number</td>
+                <td>Passport</td>
+                <td>DofB</td>
+                <td>FIO</td>
+                <td><a href="{% url "add_worker" %}">Add</a></td>
+            </tr>
+            {% for worker in worker_list %}
+                <tr>
+                    <td>{{ worker.id_worker }}</td>
+                    <td>{{ worker.post }}</td>
+                    <td>{{ worker.phone_number_worker }}</td>
+                    <td>{{ worker.account_number_worker }}</td>
+                    <td>{{ worker.passport_worker }}</td>
+                    <td>{{ worker.dofb_worker }}</td>
+                    <td>{{ worker.fio_worker }}</td>
+                    <td><a href="{% url "edit_worker" worker.id_worker %}">Edit</a></td>
+                    <td><a href="{% url "delete_worker" worker.id_worker %}">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <h1><a href="../../mainmenu">Return to menu</a>
+        </h1>
+    </div>
+
+{% endblock content %}

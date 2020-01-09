@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Таблица Work{% endblock title %}
+
+{% block content %}
+    <h1 style="color: honeydew"></h1>
+    <div class="container">
+        <h1 style="color: #FFFFFF">Таблица Work</h1>
+        <table class="table table-light border table-hover" align="center">
+            <tr class="bold_text">
+                <td>Work id</td>
+                <td>Detail</td>
+                <td>Name</td>
+                <td>Term</td>
+                <td>Price</td>
+                <td><a href="{% url "add_work" %}">Add</a></td>
+            </tr>
+            {% for work in work_list %}
+                <tr>
+                    <td>{{ work.id_work }}</td>
+                    <td>{{ work.detail }}</td>
+                    <td>{{ work.work_name }}</td>
+                    <td>{{ work.work_term }}</td>
+                    <td>{{ work.work_price }}</td>
+                    <td><a href="{% url "edit_work" work.id_work %}">Edit</a></td>
+                    <td><a href="{% url "delete_work" work.id_work %}">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <h1><a href="../../mainmenu">Return to menu</a>
+        </h1>
+    </div>
+
+{% endblock content %}

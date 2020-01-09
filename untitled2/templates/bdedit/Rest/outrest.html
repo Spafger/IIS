@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Таблица Rec T{% endblock title %}
+
+{% block content %}
+    <h1 style="color: honeydew"></h1>
+    <div class="container">
+        <h1 style="color: #FFFFFF">Таблица Receiving Transfer</h1>
+        <table class="table table-light border table-hover" align="center">
+            <tr class="bold_text">
+                <td>id</td>
+                <td>Client</td>
+                <td>PC</td>
+                <td>Date</td>
+                <td><a href="{% url "add_rest" %}">Add</a></td>
+            </tr>
+            {% for rest in rest_list %}
+                <tr>
+                    <td>{{ rest.id_receivingtransfer }}</td>
+                    <td>{{ rest.client_id }}</td>
+                    <td>{{ rest.pc_id }}</td>
+                    <td>{{ rest.date_receive }}</td>
+                    <td><a href="{% url "edit_rest" rest.id_receivingtransfer %}">Edit</a></td>
+                    <td><a href="{% url "delete_rest" rest.id_receivingtransfer %}">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <h1><a href="../../mainmenu">Return to menu</a>
+        </h1>
+    </div>
+
+{% endblock content %}

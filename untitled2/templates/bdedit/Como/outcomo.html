@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Таблица Compl order{% endblock title %}
+
+{% block content %}
+    <h1 style="color: honeydew"></h1>
+    <div class="container">
+        <h1 style="color: #FFFFFF">Таблица Component order</h1>
+        <table class="table table-light border table-hover" align="center">
+            <tr class="bold_text">
+                <td>Component order id</td>
+                <td>Total cost<td>
+                <td>Store Component</td>
+                <td>Amount</td>
+                <td><a href="{% url "add_como" %}">Add</a></td>
+            </tr>
+            {% for como in como_list %}
+                <tr>
+                    <td>{{ como.id_compl_order }}</td>
+                    <td>{{ como.total_cost }}</td>
+                    <td></td>
+                    <td>{{ como.store_compl_id }}</td>
+                    <td>{{ como.amount_compl }}</td>
+                    <td><a href="{% url "edit_como" como.id_compl_order %}">Edit</a></td>
+                    <td><a href="{% url "delete_como" como.id_compl_order %}">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <h1><a href="../../mainmenu">Return to menu</a>
+        </h1>
+    </div>
+
+{% endblock content %}

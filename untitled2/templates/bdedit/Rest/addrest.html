@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Добавить Rec T{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h1 style="color: #FFFFFF">Add new Receiving transfer</h1>
+    </div>
+    {% if flag %}
+        <div class="container" style="background-color:lightgreen">
+            <p style="font-size: 14pt; font-style: italic;">Receiving transfer added</p>
+        </div>
+    {% endif %}
+    <div class="container">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <td>Client</td>
+                    <td>{{ form.client_id }}</td>
+                    <td><a href="{% url "add_client" %}">Add Client</a></td>
+                </tr>
+                <tr>
+                    <td>PC</td>
+                    <td>{{ form.pc_id }}</td>
+                    <td><a href="{% url "add_pc" %}">Add PC</a></td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>{{ form.date_receive }}</td>
+                </tr>
+            </table>
+
+            <p><input type="submit" class="btn-success"></p>
+        </form>
+        <h1><a href="{% url "out_rest" %}">Return to list</a></h1>
+    </div>
+{% endblock content %}

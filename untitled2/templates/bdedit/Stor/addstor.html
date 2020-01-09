@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Добавить Storage{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h1 style="color: #FFFFFF">Add new Storage</h1>
+    </div>
+    {% if flag %}
+        <div class="container" style="background-color:lightgreen">
+            <p style="font-size: 14pt; font-style: italic;">Storage added</p>
+        </div>
+    {% endif %}
+    <div class="container">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <td>Component</td>
+                    <td>{{ form.compl_id }}</td>
+                    <td><a href="{% url "add_compl" %}">Add Compl</a></td>
+                </tr>
+                <tr>
+                    <td>Balance</td>
+                    <td>{{ form.stock_balance }}</td>
+                </tr>
+                <tr>
+                    <td>Supplier</td>
+                    <td>{{ form.supplier_id }}</td>
+                    <td><a href="{% url "add_supp" %}">Add Supplier</a></td>
+                </tr>
+            </table>
+
+            <p><input type="submit" class="btn-success"></p>
+        </form>
+        <h1><a href="{% url "out_stor" %}">Return to list</a></h1>
+    </div>
+{% endblock content %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Таблица Order{% endblock title %}
+
+{% block content %}
+    <h1 style="color: honeydew"></h1>
+    <div class="container">
+        <h1 style="color: #FFFFFF">Таблица Order</h1>
+        <table class="table table-light border table-hover" align="center">
+            <tr class="bold_text">
+                <td>Order id</td>
+                <td>Sum order</td>
+                <td>service adress</td>
+                <td>Ordering services</td>
+                <td>Receiving transfer</td>
+                <td>Date order</td>
+                <td><a href="{% url "add_order" %}">Add</a></td>
+            </tr>
+            {% for order in order_list %}
+                <tr>
+                    <td>{{ order.id_order }}</td>
+                    <td>{{ order.sum_order }}</td>
+                    <td>{{ order.service_adress_id }}</td>
+                    <td>{{ order.ordering_services_id }}</td>
+                    <td>{{ order.receivingtransfer_id }}</td>
+                    <td>{{ order.date_order }}</td>
+                    <td><a href="{% url "edit_order" order.id_order %}">Edit</a></td>
+                    <td><a href="{% url "delete_order" order.id_order %}">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <h1><a href="../../mainmenu">Return to menu</a>
+        </h1>
+    </div>
+
+{% endblock content %}

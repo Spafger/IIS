@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Добавить Client{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h1 style="color: #FFFFFF">Add new Client</h1>
+    </div>
+    {% if flag %}
+        <div class="container" style="background-color:lightgreen">
+            <p style="font-size: 14pt; font-style: italic;">Client added</p>
+        </div>
+    {% endif %}
+    <div class="container">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <td>Phone number</td>
+                    <td>{{ form.phone_number }}</td>
+                </tr>
+                <tr>
+                    <td>Card</td>
+                    <td>{{ form.card_id }}</td>
+                    <td><a href="{% url "add_disc" %}">Add card</a></td>
+                </tr>
+                <tr>
+                    <td>FIO</td>
+                    <td>{{ form.fio_client }}</td>
+                </tr>
+            </table>
+
+            <p><input type="submit" class="btn-success"></p>
+        </form>
+        <h1><a href="{% url "out_client" %}">Return to menu</a></h1>
+    </div>
+{% endblock content %}

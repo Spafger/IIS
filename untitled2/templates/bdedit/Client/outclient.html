@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Таблица Client0{% endblock title %}
+
+{% block content %}
+    <h1 style="color: honeydew"></h1>
+    <div class="container">
+        <h1 style="color: #FFFFFF">Таблица Client</h1>
+        <table class="table table-light border table-hover" align="center">
+            <tr class="bold_text">
+                <td>Client</td>
+                <td>Phone number</td>
+                <td>Card and bonuses</td>
+                <td>FIO</td>
+                <td><a href="{% url "add_client" %}">Add</a></td>
+            </tr>
+            {% for client in client_list %}
+                <tr>
+                    <td>{{ client.id_client }}</td>
+                    <td>{{ client.phone_number }}</td>
+                    <td>{{ client.card_id }}</td>
+                    <td>{{ client.fio_client }}</td>
+                    <td><a href="{% url "edit_client" client.id_client %}">Edit</a></td>
+                    <td><a href="{% url "delete_client" client.id_client %}">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <h1><a href="../../mainmenu">Return to menu</a>
+        </h1>
+    </div>
+
+{% endblock content %}

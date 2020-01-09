@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Редактировать Service adress{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h1 style="color: #FFFFFF">Edit Service adress: {{ sera }}</h1>
+    </div>
+    {% if flag %}
+        <div class="container" style="background-color:lightgreen">
+            <p style="font-size: 14pt; font-style: italic;">Service adress updated</p>
+        </div>
+    {% endif %}
+    <div class="container">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr hidden>
+                    <td>Ser A id</td>
+                    <td>{{ form.id_service_adress }}</td>
+                </tr>
+                <tr>
+                    <td>Adress</td>
+                    <td>{{ form.service_adress }}</td>
+                </tr>
+                <tr>
+                    <td>Phone number</td>
+                    <td>{{ form.phone_number_adress }}</td>
+                </tr>
+            </table>
+            <p>
+                <input type="submit" class="btn-success">
+                <a href="../outsera"><input type="button" class="btn-light" value="Discard changes"></a>
+            </p>
+        </form>
+        <h1><a href="{% url "out_sera" %}">Return to list</a></h1>
+    </div>
+{% endblock content %}

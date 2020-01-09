@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Редактировать Ordering services{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h1 style="color: #FFFFFF">Edit Ordering services: {{ orse }}</h1>
+    </div>
+    {% if flag %}
+        <div class="container" style="background-color:lightgreen">
+            <p style="font-size: 14pt; font-style: italic;">Ordering services updated</p>
+        </div>
+    {% endif %}
+    <div class="container">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr hidden>
+                    <td>Orse</td>
+                    <td>{{ form.id_ordering_services }}</td>
+                </tr>
+                <tr>
+                    <td>Work</td>
+                    <td>{{ form.work_id }}</td>
+                    <td><a href="{% url "add_work" %}">Add Work</a></td>
+                </tr>
+                <tr>
+                    <td>Work price</td>
+                    <td>{{ form.work_price }}</td>
+                </tr>
+                <tr>
+                    <td>Worker</td>
+                    <td>{{ form.worker_id }}</td>
+                    <td><a href="{% url "add_worker" %}">Add Worker</a></td>
+                </tr>
+                <tr>
+                    <td>Compl order</td>
+                    <td>{{ form.compl_order_id }}</td>
+                    <td><a href="{% url "add_como" %}">Add Compl order</a></td>
+                </tr>
+                <tr>
+                    <td>Note</td>
+                    <td>{{ form.note_ordering_services }}</td>
+                </tr>
+            </table>
+            <p>
+                <input type="submit" class="btn-success">
+                <a href="../outorse"><input type="button" class="btn-light" value="Discard changes"></a>
+            </p>
+        </form>
+        <h1><a href="{% url "out_orse" %}">Return to list</a></h1>
+    </div>
+{% endblock content %}

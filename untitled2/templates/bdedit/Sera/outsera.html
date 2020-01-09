@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Таблица Service adress{% endblock title %}
+
+{% block content %}
+    <h1 style="color: honeydew"></h1>
+    <div class="container">
+        <h1 style="color: #FFFFFF">Таблица Service adress</h1>
+        <table class="table table-light border table-hover" align="center">
+            <tr class="bold_text">
+                <td>Service adress id</td>
+                <td>Adress</td>
+                <td>Phone number</td>
+                <td><a href="{% url "add_sera" %}">Add</a></td>
+            </tr>
+            {% for sera in sera_list %}
+                <tr>
+                    <td>{{ sera.id_service_adress }}</td>
+                    <td>{{ sera.service_adress }}</td>
+                    <td>{{ sera.phone_number_adress }}</td>
+                    <td><a href="{% url "edit_sera" sera.id_service_adress %}">Edit</a></td>
+                    <td><a href="{% url "delete_sera" sera.id_service_adress %}">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <h1><a href="../../mainmenu">Return to menu</a>
+        </h1>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Таблица DIscount{% endblock title %}
+
+{% block content %}
+    <h1 style="color: honeydew"></h1>
+    <div class="container">
+        <h1 style="color: #FFFFFF">Таблица Discount</h1>
+        <table class="table table-light border table-hover" align="center">
+            <tr class="bold_text">
+                <td>Card id</td>
+                <td>Bonuses</td>
+                <td>Reception date</td>
+                <td><a href="{% url "add_disc" %}">Add</a></td>
+            </tr>
+            {% for disc in disc_list %}
+                <tr>
+                    <td>{{ disc.id_card }}</td>
+                    <td>{{ disc.bonuses }}</td>
+                    <td>{{ disc.reception_date }}</td>
+                    <td><a href="{% url "edit_disc" disc.id_card %}">Edit</a></td>
+                    <td><a href="{% url "delete_disc" disc.id_card %}">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <h1><a href="../../mainmenu">Return to menu</a>
+        </h1>
+    </div>
+
+{% endblock content %}

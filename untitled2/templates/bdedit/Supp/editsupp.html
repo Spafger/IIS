@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Редактировать Supp{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h1 style="color: #FFFFFF">Edit Supp: {{ supp }}</h1>
+    </div>
+    {% if flag %}
+        <div class="container" style="background-color:lightgreen">
+            <p style="font-size: 14pt; font-style: italic;">Supp updated</p>
+        </div>
+    {% endif %}
+    <div class="container">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr hidden>
+                    <td>Supp id</td>
+                    <td>{{ form.id_supplier }}</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>{{ form.supplier_name }}</td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td>{{ form.supplier_contact }}</td>
+                </tr>
+            </table>
+            <p>
+                <input type="submit" class="btn-success">
+                <a href="../outsupp"><input type="button" class="btn-light" value="Discard changes"></a>
+            </p>
+        </form>
+        <h1><a href="{% url "out_supp" %}">Return to list</a></h1>
+    </div>
+{% endblock content %}

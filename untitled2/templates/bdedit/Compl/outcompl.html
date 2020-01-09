@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Таблица Component{% endblock title %}
+
+{% block content %}
+    <h1 style="color: honeydew"></h1>
+    <div class="container">
+        <h1 style="color: #FFFFFF">Таблица Component</h1>
+        <table class="table table-light border table-hover" align="center">
+            <tr class="bold_text">
+                <td>Component id</td>
+                <td>Name</td>
+                <td>Article</td>
+                <td>Price</td>
+                <td>Maker</td>
+                <td>Description</td>
+                <td><a href="{% url "add_compl" %}">Add</a></td>
+            </tr>
+            {% for compl in compl_list %}
+                <tr>
+                    <td>{{ compl.id_compl }}</td>
+                    <td>{{ compl.compl_name }}</td>
+                    <td>{{ compl.compl_article }}</td>
+                    <td>{{ compl.compl_price }}</td>
+                    <td>{{ compl.compl_maker }}</td>
+                    <td>{{ compl.compl_description }}</td>
+                    <td><a href="{% url "edit_compl" compl.id_compl %}">Edit</a></td>
+                    <td><a href="{% url "delete_compl" compl.id_compl %}">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <h1><a href="../../mainmenu">Return to menu</a>
+        </h1>
+    </div>
+
+{% endblock content %}

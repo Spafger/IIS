@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Таблица Storage{% endblock title %}
+
+{% block content %}
+    <h1 style="color: honeydew"></h1>
+    <div class="container">
+        <h1 style="color: #FFFFFF">Таблица Storage</h1>
+        <table class="table table-light border table-hover" align="center">
+            <tr class="bold_text">
+                <td>Storage id</td>
+                <td>Component</td>
+                <td>Balance</td>
+                <td>Supplier</td>
+                <td><a href="{% url "add_stor" %}">Add</a></td>
+            </tr>
+            {% for stor in stor_list %}
+                <tr>
+                    <td>{{ stor.id_store_compl }}</td>
+                    <td>{{ stor.compl_id }}</td>
+                    <td>{{ stor.stock_balance }}</td>
+                    <td>{{ stor.supplier_id }}</td>
+                    <td><a href="{% url "edit_stor" stor.id_store_compl %}">Edit</a></td>
+                    <td><a href="{% url "delete_stor" stor.id_store_compl %}">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <h1><a href="../../mainmenu">Return to menu</a>
+        </h1>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Таблица Ordering services{% endblock title %}
+
+{% block content %}
+    <h1 style="color: honeydew"></h1>
+    <div class="container">
+        <h1 style="color: #FFFFFF">Таблица Ordering services</h1>
+        <table class="table table-light border table-hover" align="center">
+            <tr class="bold_text">
+                <td>Ordering services id</td>
+                <td>Work</td>
+                <td>Work price</td>
+                <td>Worker</td>
+                <td>Compl order</td>
+                <td>Note</td>
+                <td><a href="{% url "add_orse" %}">Add</a></td>
+            </tr>
+            {% for orse in orse_list %}
+                <tr>
+                    <td>{{ orse.id_ordering_services }}</td>
+                    <td>{{ orse.work_id }}</td>
+                    <td>{{ orse.work_price }}</td>
+                    <td>{{ orse.worker_id }}</td>
+                    <td>{{ orse.compl_order_id }}</td>
+                    <td>{{ orse.note_ordering_services }}</td>
+                    <td><a href="{% url "edit_orse" orse.id_ordering_services %}">Edit</a></td>
+                    <td><a href="{% url "delete_orse" orse.id_ordering_services %}">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <h1><a href="../../mainmenu">Return to menu</a>
+        </h1>
+    </div>
+
+{% endblock content %}
