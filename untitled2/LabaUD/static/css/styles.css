@@ -1,0 +1,9 @@
+header h1{
+    color: red;
+    font-size: 24pt;
+    font-style: italic;
+}
+
+.bold_text{
+    font-weight: bold;
+}
